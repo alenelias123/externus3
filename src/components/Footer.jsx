@@ -9,7 +9,13 @@ function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-lime-400 rounded-lg h-12 w-12" />
+              <div className="bg-lime-400 rounded-lg h-12 w-12 flex items-center justify-center">
+                <img
+                  src="/FAVICON.ico"
+                  alt="Externus Media Logo"
+                  className="w-6 h-6 object-contain"
+                />
+              </div>
               <div className="text-2xl font-bold text-white">
                 Externus Media
               </div>

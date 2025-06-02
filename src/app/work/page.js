@@ -1,79 +1,8 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { featuredProjects, regularProjects } from "../../data/portfolio";
 
 export default function WorkPage() {
-  const projects = [
-    {
-      id: 1,
-      title: "TechFlow SaaS Platform",
-      category: "Web Design & Branding",
-      description:
-        "Complete brand identity and web platform design for a B2B SaaS startup specializing in workflow automation.",
-      image: "/placeholder-project-1.jpg",
-      tags: ["Branding", "Web Design", "UI/UX", "SaaS"],
-      link: "#",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "EcoVibe Sustainable Fashion",
-      category: "Social Media Strategy",
-      description:
-        "Social media campaign and content strategy that increased brand awareness by 300% and drove sustainable fashion adoption.",
-      image: "/placeholder-project-2.jpg",
-      tags: ["Social Media", "Content Strategy", "Fashion", "Sustainability"],
-      link: "#",
-      featured: true,
-    },
-    {
-      id: 3,
-      title: "FinanceForward Mobile App",
-      category: "UI/UX Design",
-      description:
-        "Mobile app interface design for a personal finance management platform with focus on accessibility and user experience.",
-      image: "/placeholder-project-3.jpg",
-      tags: ["Mobile Design", "FinTech", "UI/UX", "Accessibility"],
-      link: "#",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "LocalBites Restaurant Chain",
-      category: "Complete Brand Overhaul",
-      description:
-        "End-to-end rebranding including logo design, marketing materials, website, and social media presence for a growing restaurant chain.",
-      image: "/placeholder-project-4.jpg",
-      tags: ["Branding", "Restaurant", "Marketing", "Web Design"],
-      link: "#",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "MindfulSpace Wellness App",
-      category: "Digital Product Design",
-      description:
-        "Comprehensive design system and user interface for a meditation and wellness mobile application with 50k+ active users.",
-      image: "/placeholder-project-5.jpg",
-      tags: ["Mobile App", "Wellness", "Design System", "UI/UX"],
-      link: "#",
-      featured: false,
-    },
-    {
-      id: 6,
-      title: "CloudTech Enterprise Portal",
-      category: "Enterprise Web Development",
-      description:
-        "Custom enterprise portal development with advanced dashboard functionality and integrations for a cloud services provider.",
-      image: "/placeholder-project-6.jpg",
-      tags: ["Enterprise", "Web Development", "Dashboard", "Cloud"],
-      link: "#",
-      featured: false,
-    },
-  ];
-
-  const featuredProjects = projects.filter((project) => project.featured);
-  const regularProjects = projects.filter((project) => !project.featured);
-
   return (
     <div className="bg-black text-white min-h-screen font-sans">
       <Header />

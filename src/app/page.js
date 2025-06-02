@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { featuredProjects } from "../data/portfolio";
 
 export default function HomePage() {
   const services = [
@@ -17,14 +18,14 @@ export default function HomePage() {
     },
     {
       icon: "💻",
-      title: "Web Design & Development",
+      title: "Business Strategy Development",
       description:
-        "Modern, responsive websites that convert visitors into customers with seamless user experience and performance optimization.",
+        " We analyze market trends, identify opportunities, and create comprehensive strategies that align with your business goals.",
       features: [
-        "Responsive Design",
-        "E-commerce",
-        "CMS Development",
-        "Performance Optimization",
+        "In-depth industry research",
+        "SEO and Content Strategy",
+        "Value proposition enhancementt",
+        "Competitor benchmarking",
       ],
     },
     {
@@ -42,34 +43,10 @@ export default function HomePage() {
   ];
 
   const stats = [
-    { number: "150+", label: "Projects Completed" },
-    { number: "50+", label: "Happy Clients" },
-    { number: "3M+", label: "Social Impressions" },
+    { number: "10+", label: "Projects Completed" },
+    { number: "5+", label: "Happy Clients" },
+    { number: "1K+", label: "Engaged Users" },
     { number: "98%", label: "Client Satisfaction" },
-  ];
-
-  const testimonials = [
-    {
-      quote:
-        "Externus Media transformed our brand completely. Their creative approach and attention to detail exceeded our expectations.",
-      author: "Sarah Johnson",
-      position: "CEO, TechFlow",
-      company: "TechFlow SaaS",
-    },
-    {
-      quote:
-        "The social media strategy they developed increased our engagement by 300% in just 3 months. Incredible results!",
-      author: "Michael Chen",
-      position: "Marketing Director",
-      company: "EcoVibe Fashion",
-    },
-    {
-      quote:
-        "Professional, creative, and results-driven. Externus Media is our go-to partner for all digital marketing needs.",
-      author: "Emma Rodriguez",
-      position: "Founder",
-      company: "LocalBites Restaurant",
-    },
   ];
 
   const process = [
@@ -77,31 +54,31 @@ export default function HomePage() {
       step: "01",
       title: "Discovery",
       description:
-        "We dive deep into your business goals, target audience, and competitive landscape to understand your unique needs.",
+        "We start by understanding your brand, business goals, audience behavior, and market dynamics to craft a strong foundation for success.",
     },
     {
       step: "02",
       title: "Strategy",
       description:
-        "Based on our research, we develop a comprehensive strategy tailored to achieve your specific objectives.",
+        "Using insights from research, we build a data-driven digital marketing strategy tailored to your brand’s voice and growth goals.",
     },
     {
       step: "03",
       title: "Create",
       description:
-        "Our team brings the strategy to life with creative design, compelling content, and technical excellence.",
+        "Using insights from research, we build a data-driven digital marketing strategy tailored to your brand’s voice and growth goals.",
     },
     {
       step: "04",
-      title: "Launch",
+      title: "Execute",
       description:
-        "We execute the plan with precision, ensuring every detail is perfect before going live.",
+        "We deploy targeted campaigns across the right channels—social, search, email, and more—ensuring consistency and precision in every interaction.",
     },
     {
       step: "05",
       title: "Optimize",
       description:
-        "We continuously monitor performance and optimize based on data to maximize your return on investment.",
+        "Through real-time analytics and performance tracking, we refine and scale what works—boosting reach, engagement, and conversions.",
     },
   ];
 
@@ -114,15 +91,19 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                  We Create
-                  <span className="text-lime-400"> Digital</span>
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                  Brands That Demand
+                  <span className="text-lime-400"> Attention</span>
                   <br />
-                  Experiences
+                  Strategies That Drive{" "}
+                  <span className="text-lime-400"> Sales</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                  Transforming ideas into impactful digital solutions that drive
-                  growth, engagement, and success for forward-thinking brands.
+                  Where innovation meets strategy in the digital marketing
+                  world. We are a dynamic team of marketing experts dedicated to
+                  helping businesses thrive in the digital age. We transform
+                  ideas into impactful digital solutions that drive growth,
+                  engagement, and success for forward-thinking brands.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
@@ -140,13 +121,13 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-lime-400/20 to-neutral-800/20 rounded-2xl p-8 border border-neutral-800">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-neutral-800 rounded-lg p-4 h-24"></div>
-                    <div className="bg-lime-400/30 rounded-lg p-4 h-24"></div>
-                    <div className="bg-lime-400/20 rounded-lg p-4 h-24"></div>
-                    <div className="bg-neutral-700 rounded-lg p-4 h-24"></div>
-                  </div>
+                
+                  <div className="relative overflow-hidden rounded-xl">
+                    <img
+                      src="\Abstract Design.png"
+                      alt="Abstract Design"
+                      className="w-full h-auto object-cover rounded-xl"
+                    />
                 </div>
               </div>
             </div>
@@ -223,38 +204,28 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="group bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-lime-400 transition-all">
-                <div className="aspect-video bg-gradient-to-br from-neutral-800 to-neutral-700 relative">
-                  <div className="absolute inset-0 bg-lime-400/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl text-neutral-600">1</div>
+              {featuredProjects.map((project) => (
+                <a
+                  key={project.id}
+                  href="/work"
+                  className="group bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-lime-400 transition-all"
+                >
+                  <div className="aspect-video bg-gradient-to-br from-neutral-800 to-neutral-700 relative">
+                    <div className="absolute inset-0 bg-lime-400/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-6xl text-neutral-600">
+                        {project.id}
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-lime-400 transition">
-                    TechFlow SaaS Platform
-                  </h3>
-                  <p className="text-gray-400 text-sm">
-                    Complete brand identity and web platform design
-                  </p>
-                </div>
-              </div>
-              <div className="group bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-lime-400 transition-all">
-                <div className="aspect-video bg-gradient-to-br from-neutral-800 to-neutral-700 relative">
-                  <div className="absolute inset-0 bg-lime-400/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl text-neutral-600">2</div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-lime-400 transition">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm">{project.category}</p>
                   </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-lime-400 transition">
-                    EcoVibe Fashion Campaign
-                  </h3>
-                  <p className="text-gray-400 text-sm">
-                    Social media strategy with 300% engagement increase
-                  </p>
-                </div>
-              </div>
+                </a>
+              ))}
             </div>
             <div className="text-center">
               <a
@@ -302,45 +273,6 @@ export default function HomePage() {
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {step.description}
                   </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 px-6 bg-neutral-900/30">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                What Clients Say
-              </h2>
-              <p className="text-xl text-gray-300">
-                Don't just take our word for it - hear from our satisfied
-                clients.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-neutral-900 p-6 rounded-2xl border border-neutral-800"
-                >
-                  <div className="text-lime-400 text-2xl mb-4">"</div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {testimonial.quote}
-                  </p>
-                  <div>
-                    <div className="font-semibold text-white">
-                      {testimonial.author}
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      {testimonial.position}
-                    </div>
-                    <div className="text-sm text-lime-400">
-                      {testimonial.company}
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
