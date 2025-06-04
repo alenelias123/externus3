@@ -9,7 +9,13 @@ function Header() {
   return (
     <div className="flex justify-between items-center px-40 py-5 w-full bg-black border border-neutral-800 min-h-[100px] max-md:px-20 max-md:py-5 max-sm:p-5">
       <Link href="/" className="flex relative gap-3 justify-end items-end">
-        <div className="bg-lime-400 rounded-lg h-[60px] w-[60px] max-sm:w-10 max-sm:h-10" />
+        <div className="bg-lime-400 rounded-lg h-[60px] w-[60px] max-sm:w-10 max-sm:h-10" >
+        <img
+                  src="/FAVICON.ico"
+                  alt="Externus Media Logo"
+                  className="w-6 h-6 object-contain"
+                />
+        </div>        
         <div className="ml-3.5 text-3xl leading-10 text-white max-sm:ml-2 max-sm:text-2xl">
           Externus Media
         </div>
