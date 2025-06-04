@@ -1,0 +1,14 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fashionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#fashionGrad)" />
+  <polygon points="150,100 250,100 200,200" fill="#84cc16" opacity="0.7" />
+  <polygon points="550,400 650,400 600,500" fill="#84cc16" opacity="0.4" />
+  <circle cx="400" cy="200" r="120" fill="none" stroke="#84cc16" stroke-width="3" opacity="0.6" />
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#84cc16" text-anchor="middle">EcoVibe</text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Sustainable Fashion</text>
+</svg>

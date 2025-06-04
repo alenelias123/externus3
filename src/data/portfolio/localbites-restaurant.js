@@ -7,12 +7,8 @@ export const localBitesRestaurant = {
     "End-to-end rebranding including logo design, marketing materials, website, and social media presence for a growing restaurant chain.",
   detailedDescription:
     "LocalBites needed a complete brand transformation to reflect their growth from a single location to a thriving restaurant chain. We developed a cohesive brand identity that celebrates local ingredients and community connections.",
-  image: "/placeholder-project-4.jpg",
-  images: [
-    "/placeholder-project-4-1.jpg",
-    "/placeholder-project-4-2.jpg",
-    "/placeholder-project-4-3.jpg",
-  ],
+  image: "/portfolio-4.svg",
+  images: ["/portfolio-4.svg", "/portfolio-5.svg", "/portfolio-6.svg"],
   tags: ["Branding", "Restaurant", "Marketing", "Web Design"],
   deliverables: [
     "Logo Design",

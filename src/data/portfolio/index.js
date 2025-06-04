@@ -1,20 +1,10 @@
-// Portfolio Projects Data
-import { techflowSaas } from "./techflow-saas";
-import { ecoVibeFashion } from "./ecovibe-fashion";
-import { financeForwardApp } from "./financeforward-app";
-import { localBitesRestaurant } from "./localbites-restaurant";
-import { mindfulSpaceApp } from "./mindfulspace-app";
-import { cloudTechPortal } from "./cloudtech-portal";
+// Portfolio Projects Data - Digital Marketing Agency Works
+import { autopulse } from "./autopulse";
+import { fitclub } from "./fitclub";
+import { unicornEvents } from "./unicorn-events";
 
 // All projects array
-export const allProjects = [
-  techflowSaas,
-  ecoVibeFashion,
-  financeForwardApp,
-  localBitesRestaurant,
-  mindfulSpaceApp,
-  cloudTechPortal,
-];
+export const allProjects = [autopulse, fitclub, unicornEvents];
 
 // Featured projects
 export const featuredProjects = allProjects.filter(
@@ -37,11 +27,4 @@ export const getProjectById = (id) => {
 };
 
 // Export individual projects
-export {
-  techflowSaas,
-  ecoVibeFashion,
-  financeForwardApp,
-  localBitesRestaurant,
-  mindfulSpaceApp,
-  cloudTechPortal,
-};
+export { autopulse, fitclub, unicornEvents };

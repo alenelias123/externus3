@@ -7,12 +7,8 @@ export const ecoVibeFashion = {
     "Social media campaign and content strategy that increased brand awareness by 300% and drove sustainable fashion adoption.",
   detailedDescription:
     "EcoVibe needed to establish a strong digital presence in the competitive sustainable fashion market. We developed a comprehensive social media strategy that not only increased their brand awareness but also educated consumers about sustainable fashion practices.",
-  image: "/placeholder-project-2.jpg",
-  images: [
-    "/placeholder-project-2-1.jpg",
-    "/placeholder-project-2-2.jpg",
-    "/placeholder-project-2-3.jpg",
-  ],
+  image: "/portfolio-2.svg",
+  images: ["/portfolio-2.svg", "/portfolio-3.svg", "/portfolio-4.svg"],
   tags: ["Social Media", "Content Strategy", "Fashion", "Sustainability"],
   platforms: ["Instagram", "TikTok", "Pinterest", "LinkedIn"],
   timeline: "6 months",

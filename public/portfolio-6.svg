@@ -1,0 +1,16 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="enterpriseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#enterpriseGrad)" />
+  <rect x="150" y="150" width="500" height="300" fill="none" stroke="#84cc16" stroke-width="3" rx="10" />
+  <rect x="200" y="200" width="150" height="100" fill="#84cc16" opacity="0.3" rx="5" />
+  <rect x="380" y="200" width="150" height="100" fill="#84cc16" opacity="0.5" rx="5" />
+  <rect x="200" y="320" width="330" height="80" fill="#84cc16" opacity="0.4" rx="5" />
+  <circle cx="600" cy="250" r="20" fill="#84cc16" />
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#84cc16" text-anchor="middle">CloudTech</text>
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="18" fill="#e2e8f0" text-anchor="middle">Enterprise Portal</text>
+</svg>

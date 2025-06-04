@@ -7,12 +7,8 @@ export const cloudTechPortal = {
     "Custom enterprise portal development with advanced dashboard functionality and integrations for a cloud services provider.",
   detailedDescription:
     "CloudTech needed a robust enterprise portal to manage their cloud services and client relationships. We developed a comprehensive platform with advanced dashboard functionality, real-time monitoring, and seamless integrations.",
-  image: "/placeholder-project-6.jpg",
-  images: [
-    "/placeholder-project-6-1.jpg",
-    "/placeholder-project-6-2.jpg",
-    "/placeholder-project-6-3.jpg",
-  ],
+  image: "/portfolio-6.svg",
+  images: ["/portfolio-6.svg", "/portfolio-1.svg", "/portfolio-2.svg"],
   tags: ["Enterprise", "Web Development", "Dashboard", "Cloud"],
   technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker", "Kubernetes"],
   timeline: "8 months",

@@ -7,12 +7,8 @@ export const mindfulSpaceApp = {
     "Comprehensive design system and user interface for a meditation and wellness mobile application with 50k+ active users.",
   detailedDescription:
     "MindfulSpace wanted to create a wellness app that would help users develop healthy meditation habits. We designed a calming, intuitive interface and comprehensive design system that promotes mindfulness and well-being.",
-  image: "/placeholder-project-5.jpg",
-  images: [
-    "/placeholder-project-5-1.jpg",
-    "/placeholder-project-5-2.jpg",
-    "/placeholder-project-5-3.jpg",
-  ],
+  image: "/portfolio-5.svg",
+  images: ["/portfolio-5.svg", "/portfolio-6.svg", "/portfolio-1.svg"],
   tags: ["Mobile App", "Wellness", "Design System", "UI/UX"],
   technologies: ["Flutter", "Dart", "Firebase", "Stripe"],
   timeline: "6 months",

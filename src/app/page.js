@@ -121,13 +121,12 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="relative">
-                
-                  <div className="relative overflow-hidden rounded-xl">
-                    <img
-                      src="\Abstract Design.png"
-                      alt="Abstract Design"
-                      className="w-full h-auto object-cover rounded-xl"
-                    />
+                <div className="relative overflow-hidden rounded-xl">
+                  <img
+                    src="/Abstract Design.png"
+                    alt="Abstract Design"
+                    className="w-full h-auto object-cover rounded-xl"
+                  />
                 </div>
               </div>
             </div>
@@ -210,13 +209,13 @@ export default function HomePage() {
                   href="/work"
                   className="group bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-lime-400 transition-all"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-neutral-800 to-neutral-700 relative">
+                  <div className="aspect-video bg-gradient-to-br from-neutral-800 to-neutral-700 relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-lime-400/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl text-neutral-600">
-                        {project.id}
-                      </div>
-                    </div>
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 group-hover:text-lime-400 transition">
