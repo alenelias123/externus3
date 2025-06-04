@@ -13,7 +13,7 @@ function Header() {
         <img
                   src="/FAVICON.ico"
                   alt="Externus Media Logo"
-                  className="w-6 h-6 object-contain"
+                  className="object-contain"
                 />
         </div>        
         <div className="ml-3.5 text-3xl leading-10 text-white max-sm:ml-2 max-sm:text-2xl">
