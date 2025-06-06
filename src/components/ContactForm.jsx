@@ -140,10 +140,10 @@ export default function ContactForm() {
               <div className="text-gray-300 text-sm">
                 Please try again or email us directly at{" "}
                 <a
-                  href="mailto:contact@externusmedia.com"
+                  href="mailto:info@externusmedia.com"
                   className="text-lime-400 hover:text-lime-300"
                 >
-                  contact@externusmedia.com
+                  info@externusmedia.com
                 </a>
               </div>
             </div>
@@ -301,10 +301,10 @@ export default function ContactForm() {
           <p className="text-xs text-gray-400">
             If you prefer, you can also email us directly at{" "}
             <a
-              href="mailto:contact@externusmedia.com"
+              href="mailto:info@externusmedia.com"
               className="text-lime-400 hover:text-lime-300 transition"
             >
-              contact@externusmedia.com
+              info@externusmedia.com
             </a>
           </p>
         </div>
@@ -363,7 +363,7 @@ export default function ContactForm() {
             <div>
               <div className="text-white font-medium">Email</div>
               <a
-                href="mailto:contact@externusmedia.com"
+                href="mailto:info@externusmedia.com"
                 className="text-gray-400 hover:text-lime-400 transition"
               >
                 contact@externusmedia.com

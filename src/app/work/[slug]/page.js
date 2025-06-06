@@ -194,24 +194,6 @@ export default function ProjectPage({ params }) {
           </div>
         </section>
 
-        {/* Client Testimonial */}
-        {project.testimonial && (
-          <section className="mb-16">
-            <div className="bg-gradient-to-r from-neutral-900 to-neutral-800 rounded-2xl p-8 border border-neutral-700 text-center">
-              <div className="text-4xl text-lime-400 mb-4">"</div>
-              <blockquote className="text-xl md:text-2xl font-medium mb-6 text-gray-300">
-                {project.testimonial.text}
-              </blockquote>
-              <div className="text-lime-400 font-semibold">
-                {project.testimonial.author}
-              </div>
-              <div className="text-gray-400 text-sm">
-                {project.testimonial.position}
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* Project Tags */}
         <section className="mb-16">
           <h3 className="text-xl font-bold mb-4 text-center">Project Tags</h3>

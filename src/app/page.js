@@ -297,7 +297,7 @@ export default function HomePage() {
                   Start Your Project
                 </a>
                 <a
-                  href="mailto:contact@externusmedia.com"
+                  href="mailto:info@externusmedia.com"
                   className="border border-lime-400 text-lime-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-lime-400 hover:text-neutral-800 transition"
                 >
                   Get in Touch
