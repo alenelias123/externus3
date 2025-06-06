@@ -5,7 +5,27 @@ import { featuredProjects } from "../data/portfolio";
 export default function HomePage() {
   const services = [
     {
-      icon: "🎨",
+      icon: (
+        <svg
+          className="w-12 h-12"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5H9a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M13 8h6m-6 4h6m-6 4h6"
+          />
+        </svg>
+      ),
       title: "Brand Identity",
       description:
         "Complete brand development from logo design to brand guidelines, creating memorable identities that resonate with your audience.",
@@ -17,7 +37,21 @@ export default function HomePage() {
       ],
     },
     {
-      icon: "💻",
+      icon: (
+        <svg
+          className="w-12 h-12"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+          />
+        </svg>
+      ),
       title: "Business Strategy Development",
       description:
         " We analyze market trends, identify opportunities, and create comprehensive strategies that align with your business goals.",
@@ -29,7 +63,21 @@ export default function HomePage() {
       ],
     },
     {
-      icon: "📱",
+      icon: (
+        <svg
+          className="w-12 h-12"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+          />
+        </svg>
+      ),
       title: "Social Media Strategy",
       description:
         "Data-driven social media campaigns that build community, increase engagement, and drive measurable business results.",
@@ -150,7 +198,7 @@ export default function HomePage() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-6">
+        <section id="services-section" className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -167,7 +215,9 @@ export default function HomePage() {
                   key={index}
                   className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 hover:border-lime-400 transition-all duration-300 group"
                 >
-                  <div className="text-4xl mb-6">{service.icon}</div>
+                  <div className="text-lime-400 mb-6 group-hover:text-white transition-colors">
+                    {service.icon}
+                  </div>
                   <h3 className="text-2xl font-bold mb-4 group-hover:text-lime-400 transition">
                     {service.title}
                   </h3>
