@@ -1,10 +1,95 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 function Header() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleScrollToServices = () => {
+    if (pathname === "/") {
+      // Already on homepage, scroll to services section
+      const servicesSection = document.getElementById("services-section");
+      if (servicesSection) {
+        const headerHeight = 120;
+        const elementPosition = servicesSection.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerHeight;
+
+        const startPosition = window.pageYOffset;
+        const distance = offsetPosition - startPosition;
+        const duration = 800;
+        let start = null;
+
+        function smoothScrollAnimation(timestamp) {
+          if (!start) start = timestamp;
+          const progress = timestamp - start;
+          const percentage = Math.min(progress / duration, 1);
+
+          const easeInOutCubic =
+            percentage < 0.5
+              ? 4 * percentage * percentage * percentage
+              : 1 - Math.pow(-2 * percentage + 2, 3) / 2;
+
+          window.scrollTo(0, startPosition + distance * easeInOutCubic);
+
+          if (progress < duration) {
+            requestAnimationFrame(smoothScrollAnimation);
+          }
+        }
+
+        requestAnimationFrame(smoothScrollAnimation);
+      }
+    } else {
+      // Navigate to homepage and scroll to services
+      router.push("/?scrollTo=services");
+    }
+  };
+
+  // Handle scroll to services when arriving from other pages
+  useEffect(() => {
+    if (
+      pathname === "/" &&
+      window.location.search.includes("scrollTo=services")
+    ) {
+      // Wait longer for the page to fully load and render
+      setTimeout(() => {
+        const servicesSection = document.getElementById("services-section");
+        if (servicesSection) {
+          const headerHeight = 120;
+          const elementPosition = servicesSection.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerHeight;
+
+          const startPosition = window.pageYOffset;
+          const distance = offsetPosition - startPosition;
+          const duration = 800;
+          let start = null;
+
+          function smoothScrollAnimation(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const percentage = Math.min(progress / duration, 1);
+
+            const easeInOutCubic =
+              percentage < 0.5
+                ? 4 * percentage * percentage * percentage
+                : 1 - Math.pow(-2 * percentage + 2, 3) / 2;
+
+            window.scrollTo(0, startPosition + distance * easeInOutCubic);
+
+            if (progress < duration) {
+              requestAnimationFrame(smoothScrollAnimation);
+            }
+          }
+
+          requestAnimationFrame(smoothScrollAnimation);
+        }
+      }, 500);
+    }
+  }, [pathname]);
 
   return (
     <div className="flex justify-between items-center px-40 py-5 w-full bg-black border border-neutral-800 min-h-[100px] max-md:px-20 max-md:py-5 max-sm:p-5">
@@ -28,43 +113,8 @@ function Header() {
           <div className="text-lg font-semibold leading-7 text-white">Home</div>
         </Link>
         <button
-          onClick={() => {
-            const servicesSection = document.getElementById("services-section");
-            if (servicesSection) {
-              const headerHeight = 120; // Account for header height + padding
-              const elementPosition =
-                servicesSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerHeight;
-
-              // Enhanced smooth scrolling with custom easing
-              const startPosition = window.pageYOffset;
-              const distance = offsetPosition - startPosition;
-              const duration = 800; // 800ms for smooth animation
-              let start = null;
-
-              function smoothScrollAnimation(timestamp) {
-                if (!start) start = timestamp;
-                const progress = timestamp - start;
-                const percentage = Math.min(progress / duration, 1);
-
-                // Easing function for smooth animation (ease-in-out)
-                const easeInOutCubic =
-                  percentage < 0.5
-                    ? 4 * percentage * percentage * percentage
-                    : 1 - Math.pow(-2 * percentage + 2, 3) / 2;
-
-                window.scrollTo(0, startPosition + distance * easeInOutCubic);
-
-                if (progress < duration) {
-                  requestAnimationFrame(smoothScrollAnimation);
-                }
-              }
-
-              requestAnimationFrame(smoothScrollAnimation);
-            }
-          }}
-          className="text-lg font-medium leading-7 text-neutral-200 hover:text-white transition-colors"
+          onClick={handleScrollToServices}
+          className="text-lg font-medium leading-7 text-neutral-200 hover:text-white transition-colors cursor-pointer"
         >
           Services
         </button>
