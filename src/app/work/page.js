@@ -1,11 +1,44 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import PageMetadata from "../../components/PageMetadata";
 import { featuredProjects, regularProjects } from "../../data/portfolio";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Our Work - Digital Marketing Portfolio | Externus Media",
+  description:
+    "Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence.",
+  keywords:
+    "digital marketing portfolio, case studies, brand transformations, social media campaigns, marketing results, client success stories, creative campaigns, brand development projects",
+  openGraph: {
+    title: "Our Work - Digital Marketing Portfolio | Externus Media",
+    description:
+      "Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence.",
+    images: ["/og-image-work.jpg"],
+  },
+  twitter: {
+    title: "Our Work - Digital Marketing Portfolio | Externus Media",
+    description:
+      "Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence.",
+  },
+};
 
 export default function WorkPage() {
   return (
     <div className="bg-black text-white min-h-screen font-sans">
+      <PageMetadata
+        title="Our Work - Digital Marketing Portfolio | Externus Media"
+        description="Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence."
+        keywords="digital marketing portfolio, case studies, brand transformations, social media campaigns, marketing results, client success stories, creative campaigns, brand development projects"
+        ogImage="/og-image-work.jpg"
+        ogType="website"
+        datePublished="2023-01-01"
+        dateModified={new Date().toISOString().split("T")[0]}
+        breadcrumb={[
+          { name: "Home", url: "https://externusmedia.com" },
+          { name: "Work", url: "https://externusmedia.com/work" },
+        ]}
+      />
       <Header />
       <main className="px-6 py-20 max-w-7xl mx-auto">
         {/* Page Header */}

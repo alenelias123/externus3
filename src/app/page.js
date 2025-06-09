@@ -1,6 +1,26 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import PageMetadata from "../components/PageMetadata";
 import { featuredProjects } from "../data/portfolio";
+
+export const metadata = {
+  title: "Externus Media - Digital Marketing & Brand Strategy Agency",
+  description:
+    "Where innovation meets strategy in the digital marketing world. We transform ideas into impactful digital solutions that drive growth, engagement, and success for forward-thinking brands.",
+  keywords:
+    "digital marketing agency, brand strategy, social media marketing, content creation, SEO services, digital advertising, brand identity design, marketing consultation, business growth strategies",
+  openGraph: {
+    title: "Externus Media - Digital Marketing & Brand Strategy Agency",
+    description:
+      "Where innovation meets strategy in the digital marketing world. We transform ideas into impactful digital solutions that drive growth, engagement, and success for forward-thinking brands.",
+    images: ["/og-image-home.jpg"],
+  },
+  twitter: {
+    title: "Externus Media - Digital Marketing & Brand Strategy Agency",
+    description:
+      "Where innovation meets strategy in the digital marketing world. We transform ideas into impactful digital solutions that drive growth, engagement, and success for forward-thinking brands.",
+  },
+};
 
 export default function HomePage() {
   const services = [
@@ -132,6 +152,15 @@ export default function HomePage() {
 
   return (
     <div className="bg-black text-white min-h-screen font-sans">
+      <PageMetadata
+        title="Externus Media - Digital Marketing & Brand Strategy Agency"
+        description="Where innovation meets strategy in the digital marketing world. We transform ideas into impactful digital solutions that drive growth, engagement, and success for forward-thinking brands."
+        keywords="digital marketing agency, brand strategy, social media marketing, content creation, SEO services, digital advertising, brand identity design, marketing consultation, business growth strategies"
+        ogImage="/og-image-home.jpg"
+        datePublished="2023-01-01"
+        dateModified={new Date().toISOString().split("T")[0]}
+        breadcrumb={[{ name: "Home", url: "https://externusmedia.com" }]}
+      />
       <Header />
       <main>
         {/* Hero Section */}
