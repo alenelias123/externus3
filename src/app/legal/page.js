@@ -1,6 +1,22 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
+export const metadata = {
+  title: "Privacy, Terms & Cookies",
+  description:
+    "Read Externus Media's privacy policy, terms of service, and cookie policy. Questions about data or contracts can be sent to our contact email.",
+  openGraph: {
+    title: "Privacy, Terms & Cookies",
+    description:
+      "Read Externus Media's privacy policy, terms of service, and cookie policy. Questions about data or contracts can be sent to our contact email.",
+  },
+  twitter: {
+    title: "Privacy, Terms & Cookies",
+    description:
+      "Read Externus Media's privacy policy, terms of service, and cookie policy. Questions about data or contracts can be sent to our contact email.",
+  },
+};
+
 export default function LegalPage() {
   return (
     <div className="bg-black text-white min-h-screen font-sans">

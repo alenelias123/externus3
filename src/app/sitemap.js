@@ -2,7 +2,7 @@ import { featuredProjects, regularProjects } from "../data/portfolio";
 
 export default function sitemap() {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://externusmedia.com";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://externus.in";
 
   // Static pages
   const staticPages = [

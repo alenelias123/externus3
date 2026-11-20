@@ -2,6 +2,22 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ContactForm from "../../components/ContactForm";
 
+export const metadata = {
+  title: "Contact Us",
+  description:
+    "Contact Externus Media to start a branding, social, SEO, or paid-media project. Email us or send a brief and we will reply within one business day.",
+  openGraph: {
+    title: "Contact Us",
+    description:
+      "Contact Externus Media to start a branding, social, SEO, or paid-media project. Email us or send a brief and we will reply within one business day.",
+  },
+  twitter: {
+    title: "Contact Us",
+    description:
+      "Contact Externus Media to start a branding, social, SEO, or paid-media project. Email us or send a brief and we will reply within one business day.",
+  },
+};
+
 export default function ContactPage() {
   return (
     <div className="bg-black text-white min-h-screen font-sans">

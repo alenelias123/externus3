@@ -5,19 +5,19 @@ import { featuredProjects, regularProjects } from "../../data/portfolio";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Our Work - Digital Marketing Portfolio | Externus Media",
+  title: "Digital Marketing Portfolio & Case Studies",
   description:
     "Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence.",
   keywords:
     "digital marketing portfolio, case studies, brand transformations, social media campaigns, marketing results, client success stories, creative campaigns, brand development projects",
   openGraph: {
-    title: "Our Work - Digital Marketing Portfolio | Externus Media",
+    title: "Digital Marketing Portfolio & Case Studies",
     description:
       "Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence.",
     images: ["/og-image-work.jpg"],
   },
   twitter: {
-    title: "Our Work - Digital Marketing Portfolio | Externus Media",
+    title: "Digital Marketing Portfolio & Case Studies",
     description:
       "Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence.",
   },
@@ -27,7 +27,7 @@ export default function WorkPage() {
   return (
     <div className="bg-black text-white min-h-screen font-sans">
       <PageMetadata
-        title="Our Work - Digital Marketing Portfolio | Externus Media"
+        title="Digital Marketing Portfolio & Case Studies | Externus Media"
         description="Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence."
         keywords="digital marketing portfolio, case studies, brand transformations, social media campaigns, marketing results, client success stories, creative campaigns, brand development projects"
         ogImage="/og-image-work.jpg"
