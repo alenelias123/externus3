@@ -22,7 +22,7 @@ Allow: /*.svg
 Allow: /*.webp
 
 # Sitemap location
-Sitemap: https://externusmedia.com/sitemap.xml
+Sitemap: https://externus.in/sitemap.xml
 
 # Specific bot instructions
 User-agent: Googlebot

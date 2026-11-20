@@ -24,7 +24,7 @@ export default function PageMetadata({
   additionalSchemas = [],
 }) {
   const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://externusmedia.com";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://externus.in";
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage
     : `${siteUrl}${ogImage}`;

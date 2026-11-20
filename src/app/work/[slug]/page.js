@@ -4,6 +4,51 @@ import { getProjectBySlug, allProjects } from "../../../data/portfolio";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+const caseStudyMetadata = {
+  autopulse: {
+    title: "AutoPulse: +250% Brand Awareness",
+    description:
+      "Case study: Externus Media repositioned AutoPulse and ran social, content, and SEO work the site credits with +250% brand awareness and +300% lead generation.",
+  },
+  fitclub: {
+    title: "FitClub: +200% Membership Growth",
+    description:
+      "Case study: Externus Media's community-first campaigns for FitClub, credited on the site with +200% membership growth and +400% social followers.",
+  },
+  "unicorn-events": {
+    title: "Unicorn Events: Luxury Event Marketing",
+    description:
+      "Case study: Externus Media's luxury brand and visual strategy for Unicorn Events, credited on the site with +300% premium inquiries and +180% event bookings.",
+  },
+};
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+
+  if (!project) {
+    return {};
+  }
+
+  const meta = caseStudyMetadata[slug] || {
+    title: project.title,
+    description: project.description,
+  };
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+    },
+    twitter: {
+      title: meta.title,
+      description: meta.description,
+    },
+  };
+}
+
 export async function generateStaticParams() {
   return allProjects.map((project) => ({
     slug: project.slug,

@@ -39,7 +39,7 @@ export const metadata = {
     telephone: false,
   },
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://externusmedia.com",
+    process.env.NEXT_PUBLIC_SITE_URL || "https://externus.in",
   ),
   alternates: {
     canonical: "/",
