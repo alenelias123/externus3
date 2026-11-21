@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { CONTACT_EMAIL } from "../../lib/site";
 
 export const metadata = {
   title: "Privacy, Terms & Cookies",
@@ -109,10 +110,10 @@ export default function LegalPage() {
                   communications from us at any time. To exercise these rights,
                   please contact us at{" "}
                   <a
-                    href="mailto:info@externusmedia.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="text-lime-400 hover:text-lime-300"
                   >
-                    info@externusmedia.com
+                    {CONTACT_EMAIL}
                   </a>
                   .
                 </p>
@@ -291,14 +292,14 @@ export default function LegalPage() {
           </p>
           <div className="text-center">
             <a
-              href="mailto:info@externusmedia.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="bg-lime-400 text-neutral-800 px-6 py-3 rounded-lg font-semibold hover:bg-lime-300 transition inline-flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
               </svg>
-              Contact Us: info@externusmedia.com
+              Contact Us: {CONTACT_EMAIL}
             </a>
           </div>
           <p className="text-sm text-gray-400 text-center mt-4">

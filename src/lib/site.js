@@ -11,11 +11,9 @@ export const SITE_URL = (
 // but is an oversized icon, not a good Organization logo. og-image*.jpg files 404.
 export const SITE_LOGO_URL = `${SITE_URL}/favicon-externus.svg`;
 
-// Public contact email already shown to visitors on /contact and /legal.
-// Kept (not switched to externusmedia@gmail.com) so on-page copy and JSON-LD stay consistent.
-// Note: externusmedia.com still does not resolve and externus.in has no MX yet,
-// so deliverability depends on that mailbox actually working.
-export const CONTACT_EMAIL = "info@externusmedia.com";
+// Public contact email chosen by Chicku on 21 Nov 2026 (IST).
+// Replaces the previous info@ and contact@ addresses used on the site.
+export const CONTACT_EMAIL = "externusmedia@gmail.com";
 
 // Personal/company LinkedIn profile provided by Chicku on 21 Nov 2026 (IST).
 // Replaces the previous company URL, which 404'd.

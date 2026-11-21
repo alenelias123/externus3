@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageMetadata from "../components/PageMetadata";
 import { featuredProjects } from "../data/portfolio";
-import { SITE_URL } from "../lib/site";
+import { SITE_URL, CONTACT_EMAIL } from "../lib/site";
 
 export const metadata = {
   title: "Externus Media - Digital Marketing & Brand Strategy Agency",
@@ -381,7 +381,7 @@ export default function HomePage() {
                   Start Your Project
                 </a>
                 <a
-                  href="mailto:info@externusmedia.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="border border-lime-400 text-lime-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-lime-400 hover:text-neutral-800 transition"
                 >
                   Get in Touch
