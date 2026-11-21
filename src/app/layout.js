@@ -1,6 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
+import {
+  SITE_URL,
+  SITE_LOGO_URL,
+  CONTACT_EMAIL,
+  ORGANIZATION_SAME_AS,
+} from "../lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -105,24 +111,20 @@ export default function RootLayout({ children }) {
     name: "Externus Media",
     description:
       "Digital marketing agency specializing in brand strategy, social media marketing, and creative solutions that drive business growth.",
-    url: "https://externusmedia.com",
+    url: SITE_URL,
     logo: {
       "@type": "ImageObject",
-      url: "https://externusmedia.com/favicon-externus.svg",
+      url: SITE_LOGO_URL,
       width: 60,
       height: 60,
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "info@externusmedia.com",
+      email: CONTACT_EMAIL,
       contactType: "customer service",
       availableLanguage: "English",
     },
-    sameAs: [
-      "https://www.linkedin.com/company/externus-media",
-      "https://www.instagram.com/externus.media",
-      "https://twitter.com/ExternusMedia",
-    ],
+    sameAs: ORGANIZATION_SAME_AS,
     foundingDate: "2023",
     slogan: "Where innovation meets strategy in the digital marketing world",
     knowsAbout: [

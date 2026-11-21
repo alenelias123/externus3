@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageMetadata from "../components/PageMetadata";
 import { featuredProjects } from "../data/portfolio";
+import { SITE_URL } from "../lib/site";
 
 export const metadata = {
   title: "Externus Media - Digital Marketing & Brand Strategy Agency",
@@ -159,7 +160,7 @@ export default function HomePage() {
         ogImage="/og-image-home.jpg"
         datePublished="2023-01-01"
         dateModified={new Date().toISOString().split("T")[0]}
-        breadcrumb={[{ name: "Home", url: "https://externusmedia.com" }]}
+        breadcrumb={[{ name: "Home", url: SITE_URL }]}
       />
       <Header />
       <main>

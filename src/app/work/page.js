@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import PageMetadata from "../../components/PageMetadata";
 import { featuredProjects, regularProjects } from "../../data/portfolio";
 import Link from "next/link";
+import { SITE_URL } from "../../lib/site";
 
 export const metadata = {
   title: "Digital Marketing Portfolio & Case Studies",
@@ -35,8 +36,8 @@ export default function WorkPage() {
         datePublished="2023-01-01"
         dateModified={new Date().toISOString().split("T")[0]}
         breadcrumb={[
-          { name: "Home", url: "https://externusmedia.com" },
-          { name: "Work", url: "https://externusmedia.com/work" },
+          { name: "Home", url: SITE_URL },
+          { name: "Work", url: `${SITE_URL}/work` },
         ]}
       />
       <Header />
