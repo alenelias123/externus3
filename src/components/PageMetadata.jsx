@@ -23,17 +23,16 @@ export default function PageMetadata({
   includeOrganization = true,
   additionalSchemas = [],
 }) {
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://externus.in";
+  const siteUrl = (
+    process.env.NEXT_PUBLIC_SITE_URL || "https://externus.in"
+  ).replace(/\/$/, "");
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage
     : `${siteUrl}${ogImage}`;
-  const fullCanonical =
-    canonical ||
-    ogUrl ||
-    (typeof window !== "undefined" ? window.location.href : siteUrl);
-  const fullOgUrl =
-    ogUrl || (typeof window !== "undefined" ? window.location.href : siteUrl);
+  // Prefer the explicit canonical/ogUrl from the server page so this client
+  // helper cannot overwrite the tag with window.location.href (www, query strings).
+  const fullCanonical = resolveUrl(canonical || ogUrl, siteUrl);
+  const fullOgUrl = resolveUrl(ogUrl || canonical, siteUrl);
 
   const robotsContent = `${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`;
 
@@ -108,6 +107,12 @@ export default function PageMetadata({
   ]);
 
   return null; // This component doesn't render anything visible
+}
+
+function resolveUrl(value, siteUrl) {
+  if (!value) return siteUrl;
+  if (value.startsWith("http://") || value.startsWith("https://")) return value;
+  return `${siteUrl}${value.startsWith("/") ? value : `/${value}`}`;
 }
 
 function updateMetaTag(attribute, name, content) {

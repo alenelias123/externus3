@@ -6,6 +6,9 @@ export const metadata = {
   title: "Contact Us",
   description:
     "Contact Externus Media to start a branding, social, SEO, or paid-media project. Email us or send a brief and we will reply within one business day.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact Us",
     description:

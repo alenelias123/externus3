@@ -5,6 +5,9 @@ export const metadata = {
   title: "Privacy, Terms & Cookies",
   description:
     "Read Externus Media's privacy policy, terms of service, and cookie policy. Questions about data or contracts can be sent to our contact email.",
+  alternates: {
+    canonical: "/legal",
+  },
   openGraph: {
     title: "Privacy, Terms & Cookies",
     description:

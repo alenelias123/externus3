@@ -11,6 +11,9 @@ export const metadata = {
     "Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence.",
   keywords:
     "digital marketing portfolio, case studies, brand transformations, social media campaigns, marketing results, client success stories, creative campaigns, brand development projects",
+  alternates: {
+    canonical: "/work",
+  },
   openGraph: {
     title: "Digital Marketing Portfolio & Case Studies",
     description:
@@ -32,6 +35,7 @@ export default function WorkPage() {
         description="Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence."
         keywords="digital marketing portfolio, case studies, brand transformations, social media campaigns, marketing results, client success stories, creative campaigns, brand development projects"
         ogImage="/og-image-work.jpg"
+        canonical="/work"
         ogType="website"
         datePublished="2023-01-01"
         dateModified={new Date().toISOString().split("T")[0]}
