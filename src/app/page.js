@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageMetadata from "../components/PageMetadata";
 import { featuredProjects } from "../data/portfolio";
+import { SITE_URL } from "../lib/site";
 
 export const metadata = {
   title: "Externus Media - Digital Marketing & Brand Strategy Agency",
@@ -9,6 +10,9 @@ export const metadata = {
     "Where innovation meets strategy in the digital marketing world. We transform ideas into impactful digital solutions that drive growth, engagement, and success for forward-thinking brands.",
   keywords:
     "digital marketing agency, brand strategy, social media marketing, content creation, SEO services, digital advertising, brand identity design, marketing consultation, business growth strategies",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Externus Media - Digital Marketing & Brand Strategy Agency",
     description:
@@ -157,9 +161,10 @@ export default function HomePage() {
         description="Where innovation meets strategy in the digital marketing world. We transform ideas into impactful digital solutions that drive growth, engagement, and success for forward-thinking brands."
         keywords="digital marketing agency, brand strategy, social media marketing, content creation, SEO services, digital advertising, brand identity design, marketing consultation, business growth strategies"
         ogImage="/og-image-home.jpg"
+        canonical="/"
         datePublished="2023-01-01"
         dateModified={new Date().toISOString().split("T")[0]}
-        breadcrumb={[{ name: "Home", url: "https://externusmedia.com" }]}
+        breadcrumb={[{ name: "Home", url: SITE_URL }]}
       />
       <Header />
       <main>

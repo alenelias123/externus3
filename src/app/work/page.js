@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import PageMetadata from "../../components/PageMetadata";
 import { featuredProjects, regularProjects } from "../../data/portfolio";
 import Link from "next/link";
+import { SITE_URL } from "../../lib/site";
 
 export const metadata = {
   title: "Digital Marketing Portfolio & Case Studies",
@@ -10,6 +11,9 @@ export const metadata = {
     "Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence.",
   keywords:
     "digital marketing portfolio, case studies, brand transformations, social media campaigns, marketing results, client success stories, creative campaigns, brand development projects",
+  alternates: {
+    canonical: "/work",
+  },
   openGraph: {
     title: "Digital Marketing Portfolio & Case Studies",
     description:
@@ -31,12 +35,13 @@ export default function WorkPage() {
         description="Discover how we've helped brands transform their digital presence, build engaged communities, and achieve remarkable growth through strategic marketing and creative excellence."
         keywords="digital marketing portfolio, case studies, brand transformations, social media campaigns, marketing results, client success stories, creative campaigns, brand development projects"
         ogImage="/og-image-work.jpg"
+        canonical="/work"
         ogType="website"
         datePublished="2023-01-01"
         dateModified={new Date().toISOString().split("T")[0]}
         breadcrumb={[
-          { name: "Home", url: "https://externusmedia.com" },
-          { name: "Work", url: "https://externusmedia.com/work" },
+          { name: "Home", url: SITE_URL },
+          { name: "Work", url: `${SITE_URL}/work` },
         ]}
       />
       <Header />

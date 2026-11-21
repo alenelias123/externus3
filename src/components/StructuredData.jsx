@@ -1,16 +1,14 @@
+import { SITE_URL, SITE_LOGO_URL, CONTACT_EMAIL, ORGANIZATION_SAME_AS } from "../lib/site";
+
 export function createOrganizationSchema({
   name = "Externus Media",
   description = "Digital marketing agency specializing in brand strategy, social media marketing, and creative solutions that drive business growth.",
-  url = "https://externusmedia.com",
-  logo = "https://externusmedia.com/favicon-externus.svg",
-  email = "info@externusmedia.com",
+  url = SITE_URL,
+  logo = SITE_LOGO_URL,
+  email = CONTACT_EMAIL,
   telephone,
   address,
-  socialLinks = [
-    "https://www.linkedin.com/company/externus-media",
-    "https://www.instagram.com/externus.media",
-    "https://twitter.com/ExternusMedia",
-  ],
+  socialLinks = ORGANIZATION_SAME_AS,
 }) {
   return {
     "@context": "https://schema.org",
@@ -184,7 +182,7 @@ export function createArticleSchema({
       name: publisher,
       logo: {
         "@type": "ImageObject",
-        url: "https://externusmedia.com/favicon-externus.svg",
+        url: SITE_LOGO_URL,
       },
     },
     url: url,
