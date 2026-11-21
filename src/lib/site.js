@@ -1,5 +1,5 @@
 /**
- * Shared public site values for JSON-LD and breadcrumbs.
+ * Shared public site values for JSON-LD, breadcrumbs, and contact links.
  * NEXT_PUBLIC_SITE_URL, if set, should be the apex origin with no trailing slash.
  */
 export const SITE_URL = (
@@ -11,19 +11,20 @@ export const SITE_URL = (
 // but is an oversized icon, not a good Organization logo. og-image*.jpg files 404.
 export const SITE_LOGO_URL = `${SITE_URL}/favicon-externus.svg`;
 
-// TODO(Chicku): decide the public contact email before changing this default.
-// The site currently publishes info@externusmedia.com, but externusmedia.com
-// does not resolve (NXDOMAIN) and externus.in has no MX or TXT records yet.
-// Do not switch JSON-LD to info@externus.in (or similar) until mailbox MX/SPF
-// are in place. This patch does not change visible mailto: links.
-export const CONTACT_EMAIL = "info@externusmedia.com";
+// Public contact email chosen by Chicku on 21 Nov 2026 (IST).
+// Replaces the previous info@ and contact@ addresses used on the site.
+export const CONTACT_EMAIL = "externusmedia@gmail.com";
+
+// Personal/company LinkedIn profile provided by Chicku on 21 Nov 2026 (IST).
+// Replaces the previous company URL, which 404'd.
+export const LINKEDIN_URL =
+  "https://www.linkedin.com/in/externus-media-a40b70450/";
 
 export const ORGANIZATION_SAME_AS = [
   // Unverified as of 20 Nov 2026 (IST): Instagram served a login wall, so this
   // profile could not be confirmed. Kept here until Chicku confirms or replaces it.
   "https://www.instagram.com/externus.media",
-  // TODO(Chicku): add back only after the company page exists and is public.
-  // "https://www.linkedin.com/company/externus-media", // 404 as of 20 Nov 2026
+  LINKEDIN_URL,
   // TODO(Chicku): add back only after the account exists.
   // "https://twitter.com/ExternusMedia", // 404 as of 20 Nov 2026
   // "https://x.com/ExternusMedia", // 404 as of 20 Nov 2026
