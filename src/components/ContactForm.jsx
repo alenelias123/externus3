@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { CONTACT_EMAIL } from "../lib/site";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -140,10 +141,10 @@ export default function ContactForm() {
               <div className="text-gray-300 text-sm">
                 Please try again or email us directly at{" "}
                 <a
-                  href="mailto:info@externusmedia.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="text-lime-400 hover:text-lime-300"
                 >
-                  info@externusmedia.com
+                  {CONTACT_EMAIL}
                 </a>
               </div>
             </div>
@@ -301,10 +302,10 @@ export default function ContactForm() {
           <p className="text-xs text-gray-400">
             If you prefer, you can also email us directly at{" "}
             <a
-              href="mailto:info@externusmedia.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="text-lime-400 hover:text-lime-300 transition"
             >
-              info@externusmedia.com
+              {CONTACT_EMAIL}
             </a>
           </p>
         </div>
@@ -363,10 +364,10 @@ export default function ContactForm() {
             <div>
               <div className="text-white font-medium">Email</div>
               <a
-                href="mailto:info@externusmedia.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="text-gray-400 hover:text-lime-400 transition"
               >
-                contact@externusmedia.com
+                {CONTACT_EMAIL}
               </a>
             </div>
           </div>
