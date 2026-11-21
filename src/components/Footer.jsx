@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import { CONTACT_EMAIL, LINKEDIN_URL } from "../lib/site";
 
 function Footer() {
   return (
@@ -20,14 +21,20 @@ function Footer() {
                 Externus Media
               </div>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-gray-400 mb-4 max-w-md">
               Crafting immersive digital experiences through creativity, code &
               strategy. We help brands tell their story and connect with their
               audience.
             </p>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-gray-400 hover:text-lime-400 transition inline-block mb-6"
+            >
+              {CONTACT_EMAIL}
+            </a>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com/company/externusmedia"
+                href={LINKEDIN_URL}
                 className="bg-neutral-800 hover:bg-lime-400 text-white hover:text-neutral-800 p-3 rounded-lg transition"
                 aria-label="LinkedIn"
                 target="_blank"

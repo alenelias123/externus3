@@ -1,6 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ContactForm from "../../components/ContactForm";
+import { CONTACT_EMAIL, LINKEDIN_URL } from "../../lib/site";
 
 export const metadata = {
   title: "Contact Us",
@@ -55,10 +56,10 @@ export default function ContactPage() {
                   Get in touch for project inquiries
                 </p>
                 <a
-                  href="mailto:info@externusmedia.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="text-white hover:text-lime-400 transition font-medium"
                 >
-                  info@externusmedia.com
+                  {CONTACT_EMAIL}
                 </a>
                 <p className="text-sm text-gray-400 mt-2">
                   For urgent requests or quick questions
@@ -184,7 +185,7 @@ export default function ContactPage() {
                 </p>
                 <div className="flex gap-4">
                   <a
-                    href="https://linkedin.com/company/externusmedia"
+                    href={LINKEDIN_URL}
                     className="bg-neutral-800 hover:bg-lime-400 text-white hover:text-neutral-800 p-3 rounded-lg transition group"
                     aria-label="LinkedIn"
                     target="_blank"
@@ -246,7 +247,7 @@ export default function ContactPage() {
                   Send us an email directly for detailed inquiries
                 </p>
                 <a
-                  href="mailto:info@externusmedia.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="bg-lime-400 text-neutral-800 px-4 py-2 rounded-lg font-medium hover:bg-lime-300 transition"
                 >
                   Send Email
@@ -272,7 +273,7 @@ export default function ContactPage() {
                   Book a consultation to discuss your project
                 </p>
                 <a
-                  href="mailto:info@externusmedia.com?subject=Schedule a Consultation Call"
+                  href={`mailto:${CONTACT_EMAIL}?subject=Schedule a Consultation Call`}
                   className="bg-lime-400 text-neutral-800 px-4 py-2 rounded-lg font-medium hover:bg-lime-300 transition"
                 >
                   Book Call
@@ -298,7 +299,7 @@ export default function ContactPage() {
                   Have a quick question? Get fast answers
                 </p>
                 <a
-                  href="mailto:info@externusmedia.com?subject=Quick Question"
+                  href={`mailto:${CONTACT_EMAIL}?subject=Quick Question`}
                   className="bg-lime-400 text-neutral-800 px-4 py-2 rounded-lg font-medium hover:bg-lime-300 transition"
                 >
                   Ask Now
